@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+  <title>Travel Management Solution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: auto;
+            width: 50%;
+            border: 3px solid orange;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: black;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+        <h1>Welcome to Travel Management Solution</h1>
+        <p>
+		<a th:href="@{/cab/book}">Book Cab</a><br><br>
+		<a th:href="@{/cab/fare}">Calculate Cab Fare</a><br>
+        </p>
+    </div>
+</body>
+</html>

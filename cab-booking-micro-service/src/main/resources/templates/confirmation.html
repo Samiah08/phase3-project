@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Booking Confirmation</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Booking Confirmation</h1>
+    <p>Fare: <span th:text="${response.fare}">[Fare]</span></p>
+    <p>Message: <span th:text="${response.message}">[Message]</span></p>
+
+    <p>
+        <a th:href="@{/cab/book}">Book Another Cab</a> |
+        <a th:href="@{/cab/}">Go to Index</a>
+    </p>
+</body>
+</html>

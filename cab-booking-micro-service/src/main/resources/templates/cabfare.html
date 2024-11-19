@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Calculate Cab Fare</title>
+</head>
+<body>
+    <h1>Calculate Cab Fare</h1>
+    <form th:action="@{/cab/calculatefare}" th:object="${booking}" method="post">
+        <label for="fromlocation">From:</label>
+        <input type="text" id="fromlocation" name="fromlocation" th:value="*{fromlocation}" required /><br><br>
+
+        <label for="tolocation">To:</label>
+        <input type="text" id="tolocation" name="tolocation" th:value="*{tolocation}" required /><br><br>
+
+        <label for="typeofcab">Cab Type:</label>
+        <input type="text" id="typeofcab" name="typeofcab" th:value="*{typeofcab}" required /><br><br>
+        <button type="submit">Calculate Fare</button>
+        
+        <p>
+        <a th:href="@{/cab/}">Go to Index</a>
+       </p>
+    </form>
+</body>
+</html>
